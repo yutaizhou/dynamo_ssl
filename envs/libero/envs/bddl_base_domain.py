@@ -1,25 +1,23 @@
-import numpy as np
 import os
-import robosuite.utils.transform_utils as T
-
 from copy import deepcopy
-from robosuite.environments.manipulation.single_arm_env import SingleArmEnv
-from robosuite.models.tasks import ManipulationTask
-from robosuite.utils.placement_samplers import SequentialCompositeSampler
-from robosuite.utils.observables import Observable, sensor
-from robosuite.utils.mjcf_utils import CustomMaterial
-import robosuite.macros as macros
 
 import mujoco
+import numpy as np
+import robosuite.macros as macros
+import robosuite.utils.transform_utils as T
+from robosuite.environments.manipulation.single_arm_env import SingleArmEnv
+from robosuite.models.tasks import ManipulationTask
+from robosuite.utils.mjcf_utils import CustomMaterial
+from robosuite.utils.observables import Observable, sensor
+from robosuite.utils.placement_samplers import SequentialCompositeSampler
 
 from . import bddl_utils as BDDLUtils
-from .robots import *
-from .utils import *
+from .arenas import *
 from .object_states import *
 from .objects import *
 from .regions import *
-from .arenas import *
-
+from .robots import *
+from .utils import *
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
@@ -560,7 +558,6 @@ class BDDLBaseDomain(SingleArmEnv):
         return sensors, names
 
     def _add_placement_initializer(self):
-
         mapping_inv = {}
         for k, values in self.parsed_problem["fixtures"].items():
             for v in values:
@@ -736,7 +733,6 @@ class BDDLBaseDomain(SingleArmEnv):
 
         # Reset all object positions using initializer sampler if we're not directly loading from an xml
         if not self.deterministic_reset:
-
             # Sample from the placement initializer for all objects
             for object_property_initializer in self.object_property_initializers:
                 if isinstance(object_property_initializer, OpenCloseSampler):

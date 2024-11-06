@@ -1,5 +1,6 @@
-import imageio
 import os
+
+import imageio
 
 
 class VideoRecorder(object):

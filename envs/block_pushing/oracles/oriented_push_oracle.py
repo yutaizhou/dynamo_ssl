@@ -15,15 +15,16 @@
 
 """Oracle for pushing task which orients the block then pushes it."""
 
-import envs.block_pushing.oracles.pushing_info as pushing_info_module
 import numpy as np
+
+# Only used for debug visualization.
+import pybullet  # pylint: disable=unused-import
 from tf_agents.policies import py_policy
 from tf_agents.trajectories import policy_step
 from tf_agents.trajectories import time_step as ts
 from tf_agents.typing import types
 
-# Only used for debug visualization.
-import pybullet  # pylint: disable=unused-import
+import envs.block_pushing.oracles.pushing_info as pushing_info_module
 
 
 class OrientedPushOracle(py_policy.PyPolicy):
@@ -250,9 +251,7 @@ class OrientedPushNormalizedOracle(py_policy.PyPolicy):
         time_step["observation"] = self._env.calc_unnormalized_state(
             time_step["observation"]
         )
-        step = self._oracle._action(
-            ts.TimeStep(**time_step), policy_state
-        )  # pylint: disable=protected-access
+        step = self._oracle._action(ts.TimeStep(**time_step), policy_state)  # pylint: disable=protected-access
         return policy_step.PolicyStep(
             action=self._env.calc_normalized_action(step.action)
         )

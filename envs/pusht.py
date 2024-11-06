@@ -1,20 +1,22 @@
 # env import
-import gym
+import collections
+from typing import Dict, Optional, Sequence, Tuple, Union
+
+import cv2
 import einops
-from gym import spaces
-from pymunk.space_debug_draw_options import SpaceDebugColor
-from pymunk.vec2d import Vec2d
-from typing import Tuple, Sequence, Dict, Union, Optional
+import gym
+import numpy as np
 import pygame
 import pymunk
-import numpy as np
-import shapely.geometry as sg
-import cv2
-import skimage.transform as st
 import pymunk.pygame_util
-import collections
-from matplotlib import cm
+import shapely.geometry as sg
+import skimage.transform as st
 import torch
+from gym import spaces
+from matplotlib import cm
+from pymunk.space_debug_draw_options import SpaceDebugColor
+from pymunk.vec2d import Vec2d
+
 # @markdown ### **Environment**
 # @markdown Defines a PyMunk-based Push-T environment `PushTEnv`.
 # @markdown
@@ -962,8 +964,9 @@ class PushTKeypointsEnv(PushTEnv):
         return img
 
 
-import zarr
 from pathlib import Path
+
+import zarr
 
 
 class Normalizer:

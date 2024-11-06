@@ -1,11 +1,11 @@
 import os
-import gym
-import einops
-import numpy as np
-from . import benchmark
-from . import get_libero_path
-from .envs.env_wrapper import OffScreenRenderEnv
 
+import einops
+import gym
+import numpy as np
+
+from . import benchmark, get_libero_path
+from .envs.env_wrapper import OffScreenRenderEnv
 
 GOAL_PREDICATES = {
     "open_the_middle_drawer_of_the_cabinet": [

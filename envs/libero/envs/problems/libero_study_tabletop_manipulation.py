@@ -1,10 +1,10 @@
 from robosuite.utils.mjcf_utils import new_site
 
 from ..bddl_base_domain import BDDLBaseDomain, register_problem
-from ..robots import *
 from ..objects import *
 from ..predicates import *
 from ..regions import *
+from ..robots import *
 from ..utils import rectangle2xyrange
 
 
@@ -65,7 +65,6 @@ class Libero_Study_Tabletop_Manipulation(BDDLBaseDomain):
         object_sites_dict = {}
         region_dict = self.parsed_problem["regions"]
         for object_region_name in list(region_dict.keys()):
-
             if "study_table" in object_region_name:
                 ranges = region_dict[object_region_name]["ranges"][0]
                 assert ranges[2] >= ranges[0] and ranges[3] >= ranges[1]

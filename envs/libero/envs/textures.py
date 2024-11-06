@@ -1,4 +1,5 @@
 import os
+
 from .. import get_libero_path
 
 # This is the mapping from texture name to texture file name. Currently this has some duplication with style.py. We will fix this in the future.
@@ -45,7 +46,7 @@ TEXTURE_MAPPING = {
 def get_texture_file_list(type=None, texture_path="../"):
     texture_mapping_dict = {}
     path = os.path.join(texture_path, "textures")
-    for (key, value) in sorted(TEXTURE_MAPPING.items()):
+    for key, value in sorted(TEXTURE_MAPPING.items()):
         if type.lower() == "table":
             # Only those with "table" in the name or no other element name will be included
             if "table" in key.lower() or (

@@ -15,25 +15,24 @@
 
 """Multimodal block environments for the XArm."""
 
-import einops
 import collections
 import logging
 import math
 from typing import Dict, List
 
+import einops
+import numpy as np
+import pybullet
+import pybullet_utils.bullet_client as bullet_client
+import torch
 from gym import spaces
 from gym.envs import registration
+from scipy.spatial import transform
+
 from . import block_pushing
 from .utils import utils_pybullet
 from .utils.pose3d import Pose3d
-from .utils.utils_pybullet import ObjState
-from .utils.utils_pybullet import XarmState
-import numpy as np
-from scipy.spatial import transform
-import pybullet
-import pybullet_utils.bullet_client as bullet_client
-
-import torch
+from .utils.utils_pybullet import ObjState, XarmState
 
 # pytype: skip-file
 BLOCK2_URDF_PATH = "third_party/py/envs/assets/block2.urdf"

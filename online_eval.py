@@ -1,21 +1,20 @@
-import einops
 import os
+import pickle
 import random
 from collections import deque
 from pathlib import Path
 
+import einops
 import hydra
 import numpy as np
 import torch
 import tqdm
+import wandb
 from omegaconf import OmegaConf
 
-import wandb
-from utils.video import VideoRecorder
-import pickle
 from datasets.core import TrajectoryEmbeddingDataset, split_traj_datasets
 from datasets.vqbet_repro import TrajectorySlicerDataset
-
+from utils.video import VideoRecorder
 
 if "MUJOCO_GL" not in os.environ:
     os.environ["MUJOCO_GL"] = "egl"

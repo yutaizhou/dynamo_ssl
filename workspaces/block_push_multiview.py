@@ -1,11 +1,12 @@
-import utils
-import hydra
-import torch
 import einops
+import hydra
 import numpy as np
-from workspaces import base
+import torch
 from accelerate import Accelerator
+
+import utils
 from utils import get_split_idx
+from workspaces import base
 
 OBS_ELEMENT_INDICES = {
     "block_translation": np.array([0, 1]),

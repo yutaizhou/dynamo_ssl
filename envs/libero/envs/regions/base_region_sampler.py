@@ -1,14 +1,14 @@
 import collections
-import numpy as np
 import os
-import robosuite
 import xml.etree.ElementTree as ET
-
 from copy import copy
+
+import numpy as np
+import robosuite
+import robosuite.utils.transform_utils as T
 from robosuite.utils.errors import RandomizationError
 from robosuite.utils.placement_samplers import ObjectPositionSampler
 from robosuite.utils.transform_utils import quat_multiply
-import robosuite.utils.transform_utils as T
 
 
 class MultiRegionRandomSampler(ObjectPositionSampler):
@@ -493,7 +493,6 @@ class InSiteRegionRandomSampler(SiteRegionRandomSampler):
         reference_pos=(0, 0, 0),
         z_offset=0.0,
     ):
-
         super().__init__(
             name=name,
             mujoco_objects=mujoco_objects,

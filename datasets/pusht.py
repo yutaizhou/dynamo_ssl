@@ -1,8 +1,10 @@
-import torch
-import einops
 import pickle
 from pathlib import Path
 from typing import Optional
+
+import einops
+import torch
+
 from datasets.core import TrajectoryDataset
 
 

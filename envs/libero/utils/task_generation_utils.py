@@ -1,8 +1,8 @@
 import os
 from collections import namedtuple
 
-from libero.utils.mu_utils import get_scene_class
 from libero.utils.bddl_generation_utils import *
+from libero.utils.mu_utils import get_scene_class
 
 TASK_INFO = {}
 
@@ -12,7 +12,6 @@ TaskInfoTuple = namedtuple(
 
 
 def register_task_info(language, scene_name, objects_of_interest=[], goal_states=[]):
-
     if scene_name not in TASK_INFO:
         TASK_INFO[scene_name] = []
 

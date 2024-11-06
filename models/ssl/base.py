@@ -1,8 +1,8 @@
 import abc
+from typing import Dict, Tuple
 
 import torch
 import torch.nn as nn
-from typing import Tuple, Dict
 
 
 class AbstractSSL(nn.Module):
@@ -28,7 +28,12 @@ class AbstractSSL(nn.Module):
     def forward(
         self,
         obs: torch.Tensor,
-    ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, Dict[str, torch.Tensor],]:
+    ) -> Tuple[
+        torch.Tensor,
+        torch.Tensor,
+        torch.Tensor,
+        Dict[str, torch.Tensor],
+    ]:
         """
         Inputs:
             obs: the input observations

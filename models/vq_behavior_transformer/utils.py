@@ -1,5 +1,6 @@
-import torch
 from typing import Callable, List, Optional
+
+import torch
 
 
 class MLP(torch.nn.Sequential):

@@ -1,9 +1,10 @@
 from robosuite.utils.mjcf_utils import new_site
+
 from ..bddl_base_domain import BDDLBaseDomain, register_problem
-from ..robots import *
 from ..objects import *
 from ..predicates import *
 from ..regions import *
+from ..robots import *
 from ..utils import rectangle2xyrange
 
 
@@ -64,7 +65,6 @@ class Libero_Tabletop_Manipulation(BDDLBaseDomain):
         object_sites_dict = {}
         region_dict = self.parsed_problem["regions"]
         for object_region_name in list(region_dict.keys()):
-
             if "main_table" in object_region_name:
                 ranges = region_dict[object_region_name]["ranges"][0]
                 assert ranges[2] >= ranges[0] and ranges[3] >= ranges[1]
@@ -170,7 +170,6 @@ class Libero_Tabletop_Manipulation(BDDLBaseDomain):
         self.set_visualization()
 
     def set_visualization(self):
-
         for object_name in self.visualization_sites_list:
             for _, (site_name, site_visible) in (
                 self.get_object(object_name).object_properties["vis_site_names"].items()

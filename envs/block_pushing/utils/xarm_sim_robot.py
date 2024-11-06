@@ -14,11 +14,13 @@
 # limitations under the License.
 
 """XArm Robot Kinematics."""
+
+import numpy as np
+import pybullet
+from scipy.spatial import transform
+
 from . import utils_pybullet
 from .pose3d import Pose3d
-import numpy as np
-from scipy.spatial import transform
-import pybullet
 
 XARM_URDF_PATH = (
     "third_party/bullet/examples/pybullet/gym/pybullet_data/" "xarm/xarm6_robot.urdf"

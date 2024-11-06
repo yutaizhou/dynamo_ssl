@@ -1,11 +1,10 @@
 import collections
-import numpy as np
 import os
-import robosuite
 import xml.etree.ElementTree as ET
-
 from copy import copy
 
+import numpy as np
+import robosuite
 from robosuite.models.objects import MujocoObject
 
 

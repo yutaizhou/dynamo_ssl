@@ -1,13 +1,14 @@
 """Environments using kitchen and Franka robot."""
 
 import logging
+
 import einops
 import gym
 import numpy as np
 import torch
 from d4rl.kitchen.adept_envs.franka.kitchen_multitask_v0 import KitchenTaskRelaxV1
-from gym.envs.registration import register
 from dm_control.mujoco import engine
+from gym.envs.registration import register
 
 OBS_ELEMENT_INDICES = {
     "bottom burner": np.array([11, 12]),

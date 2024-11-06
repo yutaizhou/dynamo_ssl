@@ -1,7 +1,7 @@
-from bddl.parsing import *
-
 import itertools
+
 import numpy as np
+from bddl.parsing import *
 
 pi = np.pi
 

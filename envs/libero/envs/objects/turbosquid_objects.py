@@ -1,17 +1,16 @@
 import os
+import pathlib
 import re
-import numpy as np
 
+import numpy as np
 from robosuite.models.objects import MujocoXMLObject
 from robosuite.utils.mjcf_utils import xml_path_completion
-
-import pathlib
 
 absolute_path = pathlib.Path(__file__).parent.parent.parent.absolute()
 
 from ..base_object import (
-    register_visual_change_object,
     register_object,
+    register_visual_change_object,
 )
 
 

@@ -1,9 +1,11 @@
 import abc
-import utils
-import torch
+from typing import Callable, Optional
+
 import numpy as np
+import torch
 from torch.utils.data import Dataset
-from typing import Optional, Callable
+
+import utils
 
 
 class TrajectoryDataset(Dataset, abc.ABC):

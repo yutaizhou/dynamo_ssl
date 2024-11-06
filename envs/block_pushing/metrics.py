@@ -18,11 +18,9 @@
 from typing import Optional, Text
 
 import numpy as np
-
 from tf_agents.metrics import py_metrics
 from tf_agents.typing import types
-from tf_agents.utils import nest_utils
-from tf_agents.utils import numpy_storage
+from tf_agents.utils import nest_utils, numpy_storage
 
 
 class AverageSuccessMetric(py_metrics.StreamingMetric):

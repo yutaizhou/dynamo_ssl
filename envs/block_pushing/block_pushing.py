@@ -22,19 +22,17 @@ import time
 from typing import Dict, List
 
 import gym
-from gym import spaces
-from gym.envs import registration
-from .utils import utils_pybullet
-from .utils import xarm_sim_robot
-from .utils.pose3d import Pose3d
-from .utils.utils_pybullet import ObjState
-from .utils.utils_pybullet import XarmState
+import matplotlib.pyplot as plt
 import numpy as np
-from scipy.spatial import transform
 import pybullet
 import pybullet_utils.bullet_client as bullet_client
+from gym import spaces
+from gym.envs import registration
+from scipy.spatial import transform
 
-import matplotlib.pyplot as plt
+from .utils import utils_pybullet, xarm_sim_robot
+from .utils.pose3d import Pose3d
+from .utils.utils_pybullet import ObjState, XarmState
 
 BLOCK_URDF_PATH = "third_party/py/envs/assets/block.urdf"
 PLANE_URDF_PATH = "third_party/bullet/examples/pybullet/gym/pybullet_data/" "plane.urdf"

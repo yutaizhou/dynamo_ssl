@@ -1,19 +1,21 @@
 import os
-import torch
-import wandb
 import random
+from collections import OrderedDict
+from pathlib import Path
+from typing import Callable, Dict
+
 import einops
 import numpy as np
+import torch
 import torch.nn as nn
-from . import inference
 import torch.utils.data
-from pathlib import Path
-from hydra.types import RunMode
-from typing import Callable, Dict
-from prettytable import PrettyTable
-from collections import OrderedDict
-from torch.utils.data import random_split
+import wandb
 from hydra.core.hydra_config import HydraConfig
+from hydra.types import RunMode
+from prettytable import PrettyTable
+from torch.utils.data import random_split
+
+from . import inference
 
 
 # Modified from https://stackoverflow.com/questions/49201236/check-the-total-number-of-parameters-in-a-pytorch-model

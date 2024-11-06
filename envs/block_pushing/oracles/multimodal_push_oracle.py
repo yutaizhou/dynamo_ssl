@@ -14,16 +14,18 @@
 # limitations under the License.
 
 """Oracle for multimodal pushing task."""
+
 import random
 
-import envs.block_pushing.oracles.oriented_push_oracle as oriented_push_oracle_module
 import numpy as np
+
+# Only used for debug visualization.
+import pybullet  # pylint: disable=unused-import
 from tf_agents.trajectories import policy_step
 from tf_agents.trajectories import time_step as ts
 from tf_agents.typing import types
 
-# Only used for debug visualization.
-import pybullet  # pylint: disable=unused-import
+import envs.block_pushing.oracles.oriented_push_oracle as oriented_push_oracle_module
 
 
 class MultimodalOrientedPushOracle(oriented_push_oracle_module.OrientedPushOracle):

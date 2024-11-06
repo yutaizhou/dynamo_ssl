@@ -1,8 +1,9 @@
-import torch
-import einops
-import torchvision
-import torch.nn as nn
 from typing import List, Tuple
+
+import einops
+import torch
+import torch.nn as nn
+import torchvision
 
 
 class MultiviewStack(nn.Module):

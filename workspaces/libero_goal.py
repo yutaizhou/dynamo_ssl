@@ -1,11 +1,12 @@
-import utils
-import hydra
-import torch
 import einops
+import hydra
 import numpy as np
-from workspaces import base
-from utils import get_split_idx
+import torch
 from accelerate import Accelerator
+
+import utils
+from utils import get_split_idx
+from workspaces import base
 
 accelerator = Accelerator()
 OBS_ELEMENT_INDICES = {

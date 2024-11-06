@@ -1,8 +1,9 @@
-import torch
 import logging
-import numpy as np
-import torch.nn as nn
 from typing import Callable, List
+
+import numpy as np
+import torch
+import torch.nn as nn
 from accelerate import Accelerator
 from sklearn.linear_model import LinearRegression
 

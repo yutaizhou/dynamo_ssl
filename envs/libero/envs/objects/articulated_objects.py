@@ -1,18 +1,17 @@
 import os
-import re
-import numpy as np
-
-from dataclasses import dataclass
-from robosuite.models.objects import MujocoXMLObject
-from easydict import EasyDict
-
 import pathlib
+import re
+from dataclasses import dataclass
+
+import numpy as np
+from easydict import EasyDict
+from robosuite.models.objects import MujocoXMLObject
 
 absolute_path = pathlib.Path(__file__).parent.parent.parent.absolute()
 
 from ..base_object import (
-    register_visual_change_object,
     register_object,
+    register_visual_change_object,
 )
 
 

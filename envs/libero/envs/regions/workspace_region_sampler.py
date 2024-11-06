@@ -1,7 +1,7 @@
 import numpy as np
+from robosuite.utils.transform_utils import quat_multiply
 
 from .base_region_sampler import MultiRegionRandomSampler
-from robosuite.utils.transform_utils import quat_multiply
 
 
 class TableRegionSampler(MultiRegionRandomSampler):

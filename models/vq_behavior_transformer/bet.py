@@ -1,17 +1,17 @@
-import tqdm
-import torch
-import einops
 import logging
-import torch.nn as nn
 from pathlib import Path
+from typing import Dict, Optional, Sequence, Tuple
 
-from .vqvae import VqVae
+import einops
+import torch
+import torch.nn as nn
 import torch.nn.functional as F
+import tqdm
 from accelerate import Accelerator
-from typing import Dict, Optional, Tuple, Sequence
+
 from .gpt import GPT, GPTConfig
 from .utils import MLP, batch_idx
-
+from .vqvae import VqVae
 
 accelerator = Accelerator()
 

@@ -1,14 +1,13 @@
 import os
+
+import matplotlib.cm as cm
 import numpy as np
 import robosuite as suite
-import matplotlib.cm as cm
-
 from robosuite.utils.errors import RandomizationError
-
-from . import bddl_utils as BDDLUtils
 
 # from libero.envs import *
 from . import *
+from . import bddl_utils as BDDLUtils
 
 
 class ControlEnv:

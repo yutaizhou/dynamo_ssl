@@ -1,10 +1,11 @@
-import utils
-import torch
 import einops
 import numpy as np
-from workspaces import base
-from utils import get_split_idx
+import torch
 from accelerate import Accelerator
+
+import utils
+from utils import get_split_idx
+from workspaces import base
 
 OBS_ELEMENT_INDICES = {
     "robot": np.array([0, 1, 2, 3, 4, 5, 6]),

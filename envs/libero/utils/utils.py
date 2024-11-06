@@ -1,12 +1,13 @@
-import os
-import xml.etree.ElementTree as ET
-import robosuite
-from robosuite.utils.mjcf_utils import find_elements
-import numpy as np
 import json
-import torch
+import os
 import random
+import xml.etree.ElementTree as ET
 from pathlib import Path
+
+import numpy as np
+import robosuite
+import torch
+from robosuite.utils.mjcf_utils import find_elements
 
 DIR = os.path.dirname(__file__)
 
@@ -71,5 +72,5 @@ def reconstruct_image_output(img_array):
 
 
 def update_env_kwargs(env_kwargs, **kwargs):
-    for (k, v) in kwargs.items():
+    for k, v in kwargs.items():
         env_kwargs[k] = v

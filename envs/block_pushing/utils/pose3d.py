@@ -13,10 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""A simple 6DOF pose container.
-"""
+"""A simple 6DOF pose container."""
 
 import dataclasses
+
 import numpy as np
 from scipy.spatial import transform
 

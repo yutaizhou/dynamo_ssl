@@ -14,26 +14,26 @@
 # limitations under the License.
 
 """Assortment of utilities to interact with bullet within g3."""
+
 import dataclasses
 import datetime
 import getpass
 import gzip
 import json
+import logging
 import os
 import time
 from typing import Any, Dict, List, Optional, Tuple
 
-import logging
-from .pose3d import Pose3d
 import numpy as np
-from scipy.spatial import transform
-import six
-import torch
-
-
 import pybullet
 import pybullet_data
 import pybullet_utils.bullet_client as bullet_client
+import six
+import torch
+from scipy.spatial import transform
+
+from .pose3d import Pose3d
 
 Vec3 = Tuple[float, float, float]
 Vec4 = Tuple[float, float, float, float]
@@ -349,7 +349,7 @@ class XarmState(ObjState):
         return XarmState(
             **dataclasses.asdict(ObjState.get_bullet_state(client, obj_id)),
             target_effector_pose=target_effector_pose,
-            goal_translation=goal_translation
+            goal_translation=goal_translation,
         )
 
     def serialize(self):

@@ -1,15 +1,17 @@
 """
 Download functionalities adapted from Mandlekar et. al.: https://github.com/ARISE-Initiative/robomimic/blob/master/robomimic/utils/file_utils.py
 """
-import os
-import time
-from tqdm import tqdm
-from termcolor import colored
-from pathlib import Path
-import zipfile
+
 import io
-import urllib.request
+import os
 import shutil
+import time
+import urllib.request
+import zipfile
+from pathlib import Path
+
+from termcolor import colored
+from tqdm import tqdm
 
 from libero import get_libero_path
 

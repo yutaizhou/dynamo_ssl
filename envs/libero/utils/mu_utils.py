@@ -42,7 +42,6 @@ class InitialSceneTemplates:
     def __init__(
         self, workspace_name="main_table", fixture_num_info={}, object_num_info={}
     ):
-
         self.workspace_name = workspace_name
         # print(self.workspace_name)
 

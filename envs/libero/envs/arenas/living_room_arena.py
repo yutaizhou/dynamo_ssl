@@ -1,6 +1,6 @@
+import numpy as np
 from robosuite.models.arenas import Arena
 from robosuite.utils.mjcf_utils import xml_path_completion
-import numpy as np
 
 from .style import get_texture_filename
 

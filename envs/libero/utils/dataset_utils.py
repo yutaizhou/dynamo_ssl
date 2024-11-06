@@ -1,6 +1,7 @@
+import json
+
 import h5py
 import numpy as np
-import json
 
 
 def get_dataset_info(dataset_path, filter_key=None, verbose=True):

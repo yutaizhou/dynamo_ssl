@@ -1,8 +1,10 @@
-import utils
-import torch
-import numpy as np
 from pathlib import Path
+
+import numpy as np
+import torch
 from torch.utils.data import TensorDataset
+
+import utils
 from datasets.core import TrajectoryDataset
 
 

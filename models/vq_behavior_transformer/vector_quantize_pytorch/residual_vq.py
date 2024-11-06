@@ -1,14 +1,14 @@
-from math import ceil
 from functools import partial
 from itertools import zip_longest
+from math import ceil
 from random import randrange
 
 import torch
-from torch import nn
 import torch.nn.functional as F
-from .vector_quantize_pytorch import VectorQuantize
+from einops import pack, rearrange, repeat, unpack
+from torch import nn
 
-from einops import rearrange, repeat, pack, unpack
+from .vector_quantize_pytorch import VectorQuantize
 
 # helper functions
 

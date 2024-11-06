@@ -1,28 +1,29 @@
+import pathlib
 import re
+
 import numpy as np
 import robosuite.utils.transform_utils as T
-import pathlib
 
 absolute_path = pathlib.Path(__file__).parent.parent.parent.absolute()
 from robosuite.models.objects import MujocoXMLObject
 from robosuite.utils.mjcf_utils import (
-    xml_path_completion,
-    array_to_string,
-    find_elements,
+    BLUE,
+    GREEN,
+    RED,
     CustomMaterial,
     add_to_dict,
-    RED,
-    GREEN,
-    BLUE,
+    array_to_string,
+    find_elements,
+    xml_path_completion,
+)
+
+from ..base_object import (
+    register_object,
+    register_visual_change_object,
 )
 
 # from robosuite.models.objects import BoxObject
 from .site_object import SiteObject
-
-from ..base_object import (
-    register_visual_change_object,
-    register_object,
-)
 
 
 @register_object

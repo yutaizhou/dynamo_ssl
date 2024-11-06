@@ -19,15 +19,16 @@ import collections
 import enum
 import math
 
+import numpy as np
+import pybullet
+import pybullet_utils.bullet_client as bullet_client
 from gym import spaces
 from gym.envs import registration
+from scipy.spatial import transform
+
 from . import block_pushing
 from .utils import utils_pybullet
 from .utils.pose3d import Pose3d
-import numpy as np
-from scipy.spatial import transform
-import pybullet
-import pybullet_utils.bullet_client as bullet_client
 
 ZONE2_URDF_PATH = "third_party/py/envs/assets/zone2.urdf"
 

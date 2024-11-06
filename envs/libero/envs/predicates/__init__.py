@@ -1,6 +1,5 @@
 from .base_predicates import *
 
-
 VALIDATE_PREDICATE_FN_DICT = {
     "true": TruePredicateFn(),
     "false": FalsePredicateFn(),

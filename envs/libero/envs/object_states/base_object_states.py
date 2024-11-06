@@ -1,5 +1,5 @@
-import robosuite.utils.transform_utils as transform_utils
 import numpy as np
+import robosuite.utils.transform_utils as transform_utils
 
 
 class BaseObjectState:

@@ -1,12 +1,14 @@
-import torch
+from typing import Dict, Optional, Tuple
+
 import einops
 import numpy as np
+import torch
 import torch.nn as nn
-from .base import AbstractSSL
 from accelerate import Accelerator
-from typing import Tuple, Dict, Optional
-from ..transformer_encoder import TransformerEncoder, TransformerEncoderConfig
+
 from ..ema import EMA
+from ..transformer_encoder import TransformerEncoder, TransformerEncoderConfig
+from .base import AbstractSSL
 
 
 # https://github.com/facebookresearch/vicreg/blob/main/main_vicreg.py#L239

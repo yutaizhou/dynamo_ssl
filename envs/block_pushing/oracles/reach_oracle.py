@@ -14,14 +14,15 @@
 # limitations under the License.
 
 """Reach oracle."""
+
 import numpy as np
+
+# Only used for debug visualization.
+import pybullet  # pylint: disable=unused-import
 from tf_agents.policies import py_policy
 from tf_agents.trajectories import policy_step
 from tf_agents.trajectories import time_step as ts
 from tf_agents.typing import types
-
-# Only used for debug visualization.
-import pybullet  # pylint: disable=unused-import
 
 
 class ReachOracle(py_policy.PyPolicy):
@@ -34,7 +35,6 @@ class ReachOracle(py_policy.PyPolicy):
         self._block_pushing_oracles_action_std = block_pushing_oracles_action_std
 
     def _action(self, time_step, policy_state):
-
         # Specifying this as velocity makes it independent of control frequency.
         max_step_velocity = 0.2
 

@@ -1,7 +1,9 @@
-import utils
-import torch
-import numpy as np
 from pathlib import Path
+
+import numpy as np
+import torch
+
+import utils
 from datasets.core import TrajectoryDataset
 
 
@@ -15,13 +17,20 @@ class SimKitchenTrajectoryDataset(TrajectoryDataset):
         self.states, self.actions, self.goals = utils.transpose_batch_timestep(
             states, actions, goals
         )
-        self.Ts = np.load(self.data_directory / "existence_mask.npy").sum(axis=0).astype(int).tolist()
-        
+        self.Ts = (
+            np.load(self.data_directory / "existence_mask.npy")
+            .sum(axis=0)
+            .astype(int)
+            .tolist()
+        )
+
         self.prefetch = prefetch
         if self.prefetch:
             self.obses = []
             for i in range(len(self.Ts)):
-                self.obses.append(torch.load(self.data_directory / "obses" / f"{i:03d}.pth"))
+                self.obses.append(
+                    torch.load(self.data_directory / "obses" / f"{i:03d}.pth")
+                )
         self.onehot_goals = onehot_goals
 
     def get_seq_length(self, idx):
@@ -53,6 +62,6 @@ class SimKitchenTrajectoryDataset(TrajectoryDataset):
     def __getitem__(self, idx):
         T = self.Ts[idx]
         return self.get_frames(idx, range(T))
-    
+
     def __len__(self):
         return len(self.Ts)

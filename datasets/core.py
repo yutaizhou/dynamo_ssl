@@ -1,11 +1,13 @@
 import abc
-import utils
-import torch
+from typing import Any, Callable, List, Optional, Sequence
+
 import numpy as np
+import torch
 from torch import default_generator, randperm
-from torch.utils.data import Dataset, Subset
-from typing import Callable, Optional, Sequence, List, Any
 from torch.nn.utils.rnn import pad_sequence
+from torch.utils.data import Dataset, Subset
+
+import utils
 
 
 # Taken from python 3.5 docs

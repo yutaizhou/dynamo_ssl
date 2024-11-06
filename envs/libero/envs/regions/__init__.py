@@ -1,6 +1,6 @@
 from .base_region_sampler import *
-from .workspace_region_sampler import *
 from .object_property_sampler import *
+from .workspace_region_sampler import *
 
 """
 

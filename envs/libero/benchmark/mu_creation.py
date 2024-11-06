@@ -1,16 +1,15 @@
 import re
-from ..envs import objects
-from ..utils.bddl_generation_utils import *
-from ..envs.objects import OBJECTS_DICT
-from ..utils.object_utils import get_affordance_regions
 
-from ..utils.mu_utils import register_mu, InitialSceneTemplates
+from ..envs import objects
+from ..envs.objects import OBJECTS_DICT
+from ..utils.bddl_generation_utils import *
+from ..utils.mu_utils import InitialSceneTemplates, register_mu
+from ..utils.object_utils import get_affordance_regions
 
 
 @register_mu(scene_type="kitchen")
 class KitchenScene1(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "kitchen_table": 1,
             "wooden_cabinet": 1,
@@ -72,7 +71,6 @@ class KitchenScene1(InitialSceneTemplates):
 @register_mu(scene_type="kitchen")
 class KitchenScene2(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "kitchen_table": 1,
             "wooden_cabinet": 1,
@@ -166,7 +164,6 @@ class KitchenScene2(InitialSceneTemplates):
 @register_mu(scene_type="kitchen")
 class KitchenScene3(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "kitchen_table": 1,
             "flat_stove": 1,
@@ -225,7 +222,6 @@ class KitchenScene3(InitialSceneTemplates):
 @register_mu(scene_type="kitchen")
 class KitchenScene4(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "kitchen_table": 1,
             "white_cabinet": 1,
@@ -294,7 +290,6 @@ class KitchenScene4(InitialSceneTemplates):
 @register_mu(scene_type="kitchen")
 class KitchenScene5(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "kitchen_table": 1,
             "white_cabinet": 1,
@@ -367,7 +362,6 @@ class KitchenScene5(InitialSceneTemplates):
 @register_mu(scene_type="kitchen")
 class KitchenScene6(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "kitchen_table": 1,
             "microwave": 1,
@@ -440,7 +434,6 @@ class KitchenScene6(InitialSceneTemplates):
 @register_mu(scene_type="kitchen")
 class KitchenScene7(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "kitchen_table": 1,
             "microwave": 1,
@@ -504,7 +497,6 @@ class KitchenScene7(InitialSceneTemplates):
 @register_mu(scene_type="kitchen")
 class KitchenScene8(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "kitchen_table": 1,
             "flat_stove": 1,
@@ -564,7 +556,6 @@ class KitchenScene8(InitialSceneTemplates):
 @register_mu(scene_type="kitchen")
 class KitchenScene9(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "kitchen_table": 1,
             "flat_stove": 1,
@@ -641,7 +632,6 @@ class KitchenScene9(InitialSceneTemplates):
 @register_mu(scene_type="kitchen")
 class KitchenScene10(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "kitchen_table": 1,
             "wooden_cabinet": 1,
@@ -727,7 +717,6 @@ class KitchenScene10(InitialSceneTemplates):
 @register_mu(scene_type="living_room")
 class LivingRoomScene1(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "living_room_table": 1,
         }
@@ -810,7 +799,6 @@ class LivingRoomScene1(InitialSceneTemplates):
 @register_mu(scene_type="living_room")
 class LivingRoomScene2(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "living_room_table": 1,
         }
@@ -923,7 +911,6 @@ class LivingRoomScene2(InitialSceneTemplates):
 @register_mu(scene_type="living_room")
 class LivingRoomScene3(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "living_room_table": 1,
         }
@@ -1014,7 +1001,6 @@ class LivingRoomScene3(InitialSceneTemplates):
 @register_mu(scene_type="living_room")
 class LivingRoomScene4(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "living_room_table": 1,
         }
@@ -1110,7 +1096,6 @@ class LivingRoomScene4(InitialSceneTemplates):
 @register_mu(scene_type="living_room")
 class LivingRoomScene5(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "living_room_table": 1,
         }
@@ -1193,7 +1178,6 @@ class LivingRoomScene5(InitialSceneTemplates):
 @register_mu(scene_type="living_room")
 class LivingRoomScene6(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "living_room_table": 1,
         }
@@ -1282,7 +1266,6 @@ class LivingRoomScene6(InitialSceneTemplates):
 @register_mu(scene_type="study")
 class StudyScene1(InitialSceneTemplates):
     def __init__(self):
-
         fixture_num_info = {
             "study_table": 1,
             "desk_caddy": 1,

@@ -14,6 +14,7 @@
 # limitations under the License.
 
 """Dataclass holding info needed for pushing oracles."""
+
 import dataclasses
 from typing import Any
 
